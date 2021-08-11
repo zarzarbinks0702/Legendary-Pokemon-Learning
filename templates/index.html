@@ -1,10 +1,58 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    
     <meta charset="utf-8">
-    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/style.css">
+    <title>Legendary Pokemon</title>
+
   </head>
   <body>
+
+    <div class="jumbotron">
+      <h1>Legendary Pokemon Learning</h1>
+      <h4>Can we use pokemon stats from gens 1-6 to predict legendary pokemon from gens 7 and 8?</h4>
+    </div>
+    <div class="tables row">
+      <div class="col-sm-6">
+        <h3>Comparing Model Accuracies</h3>
+        <thead class='thead-light'>
+          <th>Model</th>
+          <th>Accuracy (Gen 7)</th>
+          <th>Accuracy (Gen 8)</th>
+        </thead>
+        <tbody id="acc-table"></tbody>
+      </div>
+      <div class="col-sm-6">
+        <h3>The Most Accurate Model</h3>
+        <thead class='thead-light'>
+          <th>Precision (Gen 7)</th>
+          <th>Recall (Gen 7)</th>
+          <th>F1 Score (Gen 7)</th>
+          <th>Support (Gen 7)</th>
+          <th>Precision (Gen 8)</th>
+          <th>Recall (Gen 8)</th>
+          <th>F1 Score (Gen 8)</th>
+          <th>Support (Gen 8)</th>
+        </thead>
+        <tbody id="best-table"></tbody>
+      </div>
+    </div>
+    <div class="stats">
+      <h3>Average Stats for Legendary Pokemon vs Average Stats for Non-Legendary Pokemon</h3>
+      <!--tableau embed-->
+    </div>
+    <div class="movesets">
+      <h3>Moves Learned by Legendary Pokemon</h3>
+      <!--tableau embed-->
+    </div>
+    <div class="legendaries">
+      <h3>Number of Legendary Pokemon per Generation</h3>
+      <!--tableau embed-->
+    </div>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="static/logic.js"></script>
 
   </body>
 </html>

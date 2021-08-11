@@ -1,0 +1,23 @@
+.jumbotron {
+  background-color: #00c2c7;
+  width: 100%;
+  margin: 0 0 10px 0;
+  padding: 0;
+  height: 125px;
+  text-align: center;
+}
+
+.jumbotron h1 {
+  font-size: 60px;
+}
+
+.thead-light {
+  background-color: #daf8e3;
+}
+
+.col-sm-6 {
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  margin-top: 100px;
+}
