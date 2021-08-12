@@ -37,19 +37,19 @@ def randomTreeResults():
     return jsonify(random_forest_results)
 
 @app.route("/neuralNetwork", methods=["GET"])
-def randomTreeResults():
+def neuralNetworkResults():
     return jsonify(neural_network_results)
 
 @app.route("/logisticRegression", methods=["GET"])
-def randomTreeResults():
+def logisticRegressionResults():
     return jsonify(logistic_regression_results)
 
 @app.route("/KNN", methods=["GET"])
-def randomTreeResults():
+def knnResults():
     return jsonify(knn_results)
 
 @app.route("/SVC", methods=["GET"])
-def randomTreeResults():
+def svcResults():
     return jsonify(svc_results)
 #############################################################
 
