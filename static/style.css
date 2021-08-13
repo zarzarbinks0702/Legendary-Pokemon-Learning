@@ -1,5 +1,6 @@
 .jumbotron {
-  background-color: #00c2c7;
+  background-color: #f25200;
+  color: #272536;
   width: 100%;
   margin: 0 0 10px 0;
   padding: 0;
@@ -9,10 +10,11 @@
 
 .jumbotron h1 {
   font-size: 60px;
+
 }
 
 .thead-light {
-  background-color: #daf8e3;
+  background-color: #ada16b;
 }
 
 .col-sm-6 {
