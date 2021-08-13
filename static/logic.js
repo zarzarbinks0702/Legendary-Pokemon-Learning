@@ -1,3 +1,4 @@
+//calling results from each ML model and putting them into the comparison table
 function getRFData() {
   d3.json('/randomForest').then((data) => {
     let rfData = data;
@@ -54,6 +55,7 @@ function getLRData() {
 }
 getLRData();
 
+//calling results best model and putting them into the best model tables
 function gen7LRTable() {
   d3.json('/logisticRegression').then((data) => {
     var lrData = data;
@@ -66,7 +68,6 @@ function gen7LRTable() {
   });
 }
 gen7LRTable();
-
 function gen8LRTable() {
   d3.json('/logisticRegression').then((data) => {
     var lrData = data;
