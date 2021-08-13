@@ -32,25 +32,30 @@ def home():
 ####################################
 # ADD MORE ENDPOINTS
 ###########################################
-@app.route("/randomTree", methods=["GET"])
-def randomTreeResults():
-    return jsonify(random_forest_results)
+@app.route("/randomForest", methods=["GET"])
+def randomForestResults():
+    random_forest_dict = random_forest_results.to_dict(orient='index')
+    return jsonify(random_forest_dict)
 
 @app.route("/neuralNetwork", methods=["GET"])
 def neuralNetworkResults():
-    return jsonify(neural_network_results)
+    neural_network_dict = neural_network_results.to_dict(orient='index')
+    return jsonify(neural_network_dict)
 
 @app.route("/logisticRegression", methods=["GET"])
 def logisticRegressionResults():
-    return jsonify(logistic_regression_results)
+    logistic_regression_dict = logistic_regression_results.to_dict(orient='index')
+    return jsonify(logistic_regression_dict)
 
 @app.route("/KNN", methods=["GET"])
 def knnResults():
-    return jsonify(knn_results)
+    knn_dict = knn_results.to_dict(orient='index')
+    return jsonify(knn_dict)
 
 @app.route("/SVC", methods=["GET"])
 def svcResults():
-    return jsonify(svc_results)
+    svc_dict = svc_results.to_dict(orient='index')
+    return jsonify(svc_dict)
 #############################################################
 
 @app.after_request

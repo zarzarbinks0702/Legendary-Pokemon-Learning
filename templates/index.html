@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    
+
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="static/style.css">
@@ -22,21 +22,32 @@
           <th>Accuracy (Gen 7)</th>
           <th>Accuracy (Gen 8)</th>
         </thead>
-        <tbody id="acc-table"></tbody>
+        <tbody id="accuracy-table"></tbody>
       </div>
       <div class="col-sm-6">
-        <h3>The Most Accurate Model</h3>
-        <thead class='thead-light'>
-          <th>Precision (Gen 7)</th>
-          <th>Recall (Gen 7)</th>
-          <th>F1 Score (Gen 7)</th>
-          <th>Support (Gen 7)</th>
-          <th>Precision (Gen 8)</th>
-          <th>Recall (Gen 8)</th>
-          <th>F1 Score (Gen 8)</th>
-          <th>Support (Gen 8)</th>
-        </thead>
-        <tbody id="best-table"></tbody>
+        <div class="row">
+          <h3>The Most Accurate Model</h3>
+        </div>
+        <div class="row">
+          <div class="gen-7-table">
+            <thead class='thead-light'>
+              <th>Precision (Gen 7)</th>
+              <th>Recall (Gen 7)</th>
+              <th>F1 Score (Gen 7)</th>
+              <th>Support (Gen 7)</th>
+            </thead>
+            <tbody id="best-table-gen-7"></tbody>
+          </div>
+          <div class="gen-8-table">
+            <thead class='thead-light'>
+              <th>Precision (Gen 8)</th>
+              <th>Recall (Gen 8)</th>
+              <th>F1 Score (Gen 8)</th>
+              <th>Support (Gen 8)</th>
+            </thead>
+            <tbody id="best-table-gen-8"></tbody>
+          </div>
+        </div>
       </div>
     </div>
     <div class="stats">
