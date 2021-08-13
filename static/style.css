@@ -20,12 +20,10 @@ body {
 
 .jumbotron h1 {
   font-size: 60px;
-
 }
 
-.thead-light {
-  background-color: #00bab4;
-  border-color: #272536;
+h3 {
+  font-size: 35px;
 }
 
 .col-sm-6 {
@@ -37,4 +35,10 @@ body {
 
 .table {
   background-color: #00bab4;
+}
+
+.stats,
+.movesets,
+.legendaries {
+  margin-top: 20px;
 }
