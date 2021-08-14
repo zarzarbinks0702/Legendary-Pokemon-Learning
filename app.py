@@ -14,6 +14,7 @@ random_forest_results_query = 'SELECT * FROM random_forest_results'
 neural_network_results_query = 'SELECT * FROM neural_network_results'
 logistic_regression_results_query = 'SELECT * FROM logistic_regression_results'
 logistic_regression_classifications_query = 'SELECT * FROM logistic_regression_classifications'
+logistic_regression_matrix_query = 'SELECT * FROM logistic_regression_matrix'
 knn_results_query = 'SELECT * FROM knn_results'
 svc_results_query = 'SELECT * FROM svc_results'
 
@@ -21,15 +22,17 @@ random_forest_results = pd.read_sql(random_forest_results_query, conn)
 neural_network_results = pd.read_sql(neural_network_results_query, conn)
 logistic_regression_results = pd.read_sql(logistic_regression_results_query, conn)
 logistic_regression_classifications = pd.read_sql(logistic_regression_classifications_query, conn)
+logistic_regression_matrix = pd.read_sql(logistic_regression_matrix_query, conn)
 knn_results = pd.read_sql(knn_results_query, conn)
 svc_results = pd.read_sql(svc_results_query, conn)
 
 conn.close()
 
 # Route to render index.html template
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 def home():
-    return render_template("index.html")
+    logistic_regression_matrix_dict = logistic_regression_matrix.to_dict(orient='index')
+    return render_template("index.html", attr=logistic_regression_matrix_dict)
 
 ####################################
 # ADD MORE ENDPOINTS
