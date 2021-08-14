@@ -18,7 +18,7 @@
       <div class="row">
         <div class="col-sm-6">
           <h3>Comparing Model Accuracies</h3>
-          <table class="table table-bordered table-responsive">
+          <table class="table table-bordered">
             <thead class='thead-light'>
               <th>Model</th>
               <th>Accuracy (Gen 7)</th>
@@ -35,7 +35,7 @@
           </div>
           <div class="row">
             <center><h5>Gen 7</h5></center>
-            <table class="gen-7-table table table-bordered table-responsive">
+            <table class="gen-7-table table table-bordered">
               <thead class='thead-light'>
                 <th>R-Squared</th>
                 <th>Precision</th>
@@ -46,7 +46,7 @@
               <tbody id="best-table-gen-7"></tbody>
             </table>
             <center><h5>Gen 8</h5></center>
-            <table class="gen-8-table table table-bordered table-responsive">
+            <table class="gen-8-table table table-bordered">
               <thead class='thead-light'>
                 <th>R-Squared</th>
                 <th>Precision</th>
@@ -61,10 +61,10 @@
       </div>
       <div class="row table-analysis">
         <div class="col-sm-6">
-          <p>When looking at the models to determine the model of best fit, we chose to look at how accurate the model was and the r-squared value. The accuarcy would tell us how often the model predicted the legendary status correctly, and the r-squared value would tell us if the model was a good fit. Ultimately, the r-squared value became the final determinate for the choice of the model. The higher the r-squared value, the better fit to the data the model was. Negative values for r-squared mean the model is not a good fit at all. When looking at the values for r-squared on each model, only one model was a good fit, and that was the logistic regression model.</p>
+          <p>When looking at the models to determine the model of best fit for our data, we chose to look at how accurate the model was and the r-squared value. The accuarcy would tell us how often the model predicted the legendary status correctly, and the r-squared value would tell us if the model was a good fit. Ultimately, the r-squared value became the final determinate for the choice of the model. The higher the r-squared value, the better fit to the data the model was. Negative values for r-squared mean the model is not a good fit at all. When looking at the values for r-squared on each model, only one model was a good fit, and that was the logistic regression model.</p>
         </div>
         <div class="col-sm-6">
-          <p>Here we have the </p>
+          <p>Here we have the confusion matrix (plus the r-squared values) for the logistic regression models. We can see that the model was much better at predicting legendary pokemon in generation 8 than generation 7 (precisions of 0.975 and 0.857 respectively), but it was still pretty good at the predictions overall. Generation contained 118 total pokemon to test the model, and generation 8 contained 117 total pokemon to test the model. The model was trained with the entirety of generations 1 to 6, which is a total of 817 pokemon.</p>
         </div>
       </div>
     </div>
