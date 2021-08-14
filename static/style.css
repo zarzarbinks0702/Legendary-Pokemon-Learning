@@ -22,10 +22,7 @@ body {
 
 .jumbotron h1 {
   padding-top: 15px;
-  justify-content: center;
-  text-align: center;
   font-size: 40px;
-  font-weight: bold;
   font-family: 'Press Start 2P', cursive;
 }
 
