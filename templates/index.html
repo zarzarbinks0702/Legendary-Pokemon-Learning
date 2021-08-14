@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand&display=swap" rel="stylesheet"> 
     <title>Legendary Pokemon</title>
 
   </head>
@@ -97,6 +100,10 @@
         var scriptElement = document.createElement('script');
         scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
       </script>
+      <div class="row tableau-analysis">
+        <h6>Using Average Stats to Determine Legendary Status:</h6>
+        <p>In the games, legendary pokemon tend to be stronger, faster, and harder to catch than normal pokemon. We used the pokemon's average stats (attack, defense, capture rate, HP, speed, and starting experience) as a way to help train the model to determine the legendary status of a pokemon. From these plots, we see that legendary pokemon on average have 47% higher attack, 36% higher defense, are 2.4x harder to catch, have 41% more HP, are 51% faster, and have more than 2x the starting experience than normal, non-legendary pokemon. Because these stats are significantly different between non-legendary and legendary pokemon, looking at these stats was an indicator of the legendary status.</p>
+      </div>
     </div>
     <div class="movesets">
       <h3>Moves Learned by Legendary Pokemon</h3>
@@ -125,6 +132,9 @@
         var scriptElement = document.createElement('script');
         scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
       </script>
+      <div class="row tableau-analysis">
+
+      </div>
     </div>
     <div class="legendaries">
       <h3>Legendary Pokemon per Generation</h3>
@@ -157,6 +167,9 @@
         var scriptElement = document.createElement('script');
         scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
       </script>
+      <div class="row tableau-analysis">
+
+      </div>
     </div>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="static/logic.js"></script>
