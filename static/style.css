@@ -4,9 +4,10 @@
   width: 100%;
   margin: 0 0 10px 0;
   padding: 0;
-  height: 125px;
+  height: 9em;
   text-align: center;
   justify-content: center;
+  overflow: auto;
 }
 
 body {
@@ -21,9 +22,13 @@ body {
 }
 
 .jumbotron h1 {
-  padding-top: 15px;
-  font-size: 40px;
+  padding-top: 20px;
+  font-size: 3em;
   font-family: 'Press Start 2P', cursive;
+}
+
+.jumbotron h4 {
+  font-size: 1.5em;
 }
 
 h3 {
