@@ -12,51 +12,91 @@
 
     <div class="jumbotron">
       <h1>Legendary Pokemon Learning</h1>
-      <h4>Can we use pokemon stats from gens 1-6 to predict legendary pokemon from gens 7 and 8?</h4>
+      <h4>Can we use pokemon stats from generations 1-6 to predict legendary pokemon from generations 7 and 8?</h4>
     </div>
-    <div class="tables row">
-      <div class="col-sm-6">
-        <h3>Comparing Model Accuracies</h3>
-        <table class="table table-bordered">
-          <thead class='thead-light'>
-            <th>Model</th>
-            <th>Precision (Gen 7)</th>
-            <th>Precision (Gen 8)</th>
-          </thead>
-          <tbody id="accuracy-table"></tbody>
-        </table>
-      </div>
-      <div class="col-sm-6">
-        <div class="row">
-          <center><h3>The Most Accurate Model: Logistic Regression</h3></center>
+    <div class="tables">
+      <div class="row">
+        <div class="col-sm-6">
+          <h3>Comparing Model Accuracies</h3>
+          <table class="table table-bordered table-responsive">
+            <thead class='thead-light'>
+              <th>Model</th>
+              <th>Accuracy (Gen 7)</th>
+              <th>Accuracy (Gen 8)</th>
+              <th>R-Squared (Gen 7)</th>
+              <th>R-Squared (Gen 8)</th>
+            </thead>
+            <tbody id="accuracy-table"></tbody>
+          </table>
         </div>
-        <div class="row">
-          <center><h5>Gen 7</h5></center>
-          <table class="gen-7-table table table-bordered">
-            <thead class='thead-light'>
-              <th>Precision</th>
-              <th>Recall</th>
-              <th>F1 Score</th>
-              <th>Support</th>
-            </thead>
-            <tbody id="best-table-gen-7"></tbody>
-          </table>
-          <center><h5>Gen 8</h5></center>
-          <table class="gen-8-table table table-bordered">
-            <thead class='thead-light'>
-              <th>Precision</th>
-              <th>Recall</th>
-              <th>F1 Score</th>
-              <th>Support</th>
-            </thead>
-            <tbody id="best-table-gen-8"></tbody>
-          </table>
+        <div class="col-sm-6">
+          <div class="row">
+            <center><h3>The Most Accurate Model: Logistic Regression</h3></center>
+          </div>
+          <div class="row">
+            <center><h5>Gen 7</h5></center>
+            <table class="gen-7-table table table-bordered table-responsive">
+              <thead class='thead-light'>
+                <th>R-Squared</th>
+                <th>Precision</th>
+                <th>Recall</th>
+                <th>F1 Score</th>
+                <th>Support</th>
+              </thead>
+              <tbody id="best-table-gen-7"></tbody>
+            </table>
+            <center><h5>Gen 8</h5></center>
+            <table class="gen-8-table table table-bordered table-responsive">
+              <thead class='thead-light'>
+                <th>R-Squared</th>
+                <th>Precision</th>
+                <th>Recall</th>
+                <th>F1 Score</th>
+                <th>Support</th>
+              </thead>
+              <tbody id="best-table-gen-8"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="row table-analysis">
+        <div class="col-sm-6">
+          <p>When looking at the models to determine the model of best fit, we chose to look at how accurate the model was and the r-squared value. The accuarcy would tell us how often the model predicted the legendary status correctly, and the r-squared value would tell us if the model was a good fit. Ultimately, the r-squared value became the final determinate for the choice of the model. The higher the r-squared value, the better fit to the data the model was. Negative values for r-squared mean the model is not a good fit at all. When looking at the values for r-squared on each model, only one model was a good fit, and that was the logistic regression model.</p>
+        </div>
+        <div class="col-sm-6">
+          <p>Here we have the </p>
         </div>
       </div>
     </div>
     <div class="stats">
       <h3>Average Stats for Legendary Pokemon vs Average Stats for Non-Legendary Pokemon</h3>
       <!--tableau embed-->
+      <div class='tableauPlaceholder' id='viz1628951337494' style='position: relative'>
+        <noscript>
+          <a href='#'><img alt='Story 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AvgPokemonStats_16289050407430&#47;Story1&#47;1_rss.png' style='border: none' /></a>
+        </noscript>
+        <object class='tableauViz'  style='display:none;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+          <param name='embed_code_version' value='3' />
+          <param name='site_root' value='' />
+          <param name='name' value='AvgPokemonStats_16289050407430&#47;Story1' />
+          <param name='tabs' value='no' />
+          <param name='toolbar' value='yes' />
+          <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AvgPokemonStats_16289050407430&#47;Story1&#47;1.png' />
+          <param name='animate_transition' value='yes' />
+          <param name='display_static_image' value='yes' />
+          <param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' />
+          <param name='display_count' value='yes' />
+          <param name='language' value='en-US' />
+        </object>
+      </div>
+      <script type='text/javascript'>
+        var divElement = document.getElementById('viz1628951337494');
+        var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+      </script>
     </div>
     <div class="movesets">
       <h3>Moves Learned by Legendary Pokemon</h3>
@@ -87,28 +127,33 @@
       </script>
     </div>
     <div class="legendaries">
-      <h3>Number of Legendary Pokemon per Generation</h3>
+      <h3>Legendary Pokemon per Generation</h3>
       <!--tableau embed-->
-      <div class='tableauPlaceholder' id='viz1628819599388' style='position: relative'>
-        <noscript><a href='#'>
-          <img alt='Sheet 11 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Le&#47;LegendaryPokemon_16288193881580&#47;Sheet11&#47;1_rss.png' style='border: none' /></a>
+      <div class='tableauPlaceholder' id='viz1628951249255' style='position: relative'>
+        <noscript>
+          <a href='#'><img alt='Dashboard 2 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Le&#47;LegendaryPokemon_16289086020680&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a>
         </noscript>
         <object class='tableauViz'  style='display:none;'>
           <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-          <param name='embed_code_version' value='3' /> <param name='site_root' value='' />
-          <param name='name' value='LegendaryPokemon_16288193881580&#47;Sheet11' />
+          <param name='embed_code_version' value='3' />
+          <param name='site_root' value='' />
+          <param name='name' value='LegendaryPokemon_16289086020680&#47;Dashboard2' />
           <param name='tabs' value='no' /><param name='toolbar' value='yes' />
-          <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Le&#47;LegendaryPokemon_16288193881580&#47;Sheet11&#47;1.png' />
+          <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Le&#47;LegendaryPokemon_16289086020680&#47;Dashboard2&#47;1.png' />
           <param name='animate_transition' value='yes' />
-          <param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' />
+          <param name='display_static_image' value='yes' />
+          <param name='display_spinner' value='yes' />
           <param name='display_overlay' value='yes' />
           <param name='display_count' value='yes' />
           <param name='language' value='en-US' />
         </object>
       </div>
       <script type='text/javascript'>
-        var divElement = document.getElementById('viz1628819599388');
-        var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+        var divElement = document.getElementById('viz1628951249255');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';}
+        else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';}
+        else { vizElement.style.width='100%';vizElement.style.height='727px';}
         var scriptElement = document.createElement('script');
         scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
       </script>
