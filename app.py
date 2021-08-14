@@ -13,12 +13,14 @@ conn = sql.connect('Data-and-DBs/pokedex.db')
 random_forest_results_query = 'SELECT * FROM random_forest_results'
 neural_network_results_query = 'SELECT * FROM neural_network_results'
 logistic_regression_results_query = 'SELECT * FROM logistic_regression_results'
+logistic_regression_classifications_query = 'SELECT * FROM logistic_regression_classifications'
 knn_results_query = 'SELECT * FROM knn_results'
 svc_results_query = 'SELECT * FROM svc_results'
 
 random_forest_results = pd.read_sql(random_forest_results_query, conn)
 neural_network_results = pd.read_sql(neural_network_results_query, conn)
 logistic_regression_results = pd.read_sql(logistic_regression_results_query, conn)
+logistic_regression_classifications = pd.read_sql(logistic_regression_classifications_query, conn)
 knn_results = pd.read_sql(knn_results_query, conn)
 svc_results = pd.read_sql(svc_results_query, conn)
 
@@ -46,6 +48,11 @@ def neuralNetworkResults():
 def logisticRegressionResults():
     logistic_regression_dict = logistic_regression_results.to_dict(orient='index')
     return jsonify(logistic_regression_dict)
+
+@app.route("/logisticRegressionClassifications", methods=["GET"])
+def logisticRegressionClassifications():
+    logistic_regression_class_dict = logistic_regression_classifications.to_dict(orient='index')
+    return jsonify(logistic_regression_class_dict)
 
 @app.route("/KNN", methods=["GET"])
 def knnResults():

@@ -57,7 +57,7 @@ getLRData();
 
 //calling results best model and putting them into the best model tables
 function gen7LRTable() {
-  d3.json('/logisticRegression').then((data) => {
+  d3.json('/logisticRegressionClassifications').then((data) => {
     var lrData = data;
     let tableBody = d3.select('#best-table-gen-7');
     var row = tableBody.append('tr');
@@ -69,7 +69,7 @@ function gen7LRTable() {
 }
 gen7LRTable();
 function gen8LRTable() {
-  d3.json('/logisticRegression').then((data) => {
+  d3.json('/logisticRegressionClassifications').then((data) => {
     var lrData = data;
     let tableBody = d3.select('#best-table-gen-8');
     var row = tableBody.append('tr');
